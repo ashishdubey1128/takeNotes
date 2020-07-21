@@ -57,16 +57,16 @@ var dt = today.toString();
 // con.connect(function(err) {
 //   if (err) throw err;
 //   console.log("Connected!");
-//   var sql = "CREATE TABLE users (id int(11) AUTO_INCREMENT  PRIMARY KEY, username VARCHAR(255) UNIQUE, password VARCHAR(255) NOT NULL)";
-//   con.query(sql, function (err, result) {
-//     if (err) throw err;
-//     console.log("Table created");
-//   });
-//   var sql2 = "CREATE TABLE notes (id NOT NULL AUTO_INCREMENT,username VARCHAR(255) NOT NULL,title VARCHAR(20) NOT NULL, text VARCHAR(500) NOT NULL, date VARCHAR(50) NOT NULL)";
-//   con.query(sql2, function (err, result) {
-//     if (err) throw err;
-//     console.log("Table created");
-// });
+   var sql = "CREATE TABLE users (id int(11) AUTO_INCREMENT  PRIMARY KEY, username VARCHAR(255) UNIQUE, password VARCHAR(255) NOT NULL)";
+   con.query(sql, function (err, result) {
+     if (err) throw err;
+     console.log("Table created");
+   });
+   var sql2 = "CREATE TABLE notes (id int(11) NOT NULL AUTO_INCREMENT,username VARCHAR(255) NOT NULL,title VARCHAR(20) NOT NULL, text VARCHAR(500) NOT NULL, date VARCHAR(50) NOT NULL)";
+   con.query(sql2, function (err, result) {
+     if (err) throw err;
+    console.log("Table created");
+ });
 //});
 
 
