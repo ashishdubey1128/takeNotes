@@ -9,6 +9,7 @@ Node pckages
 3. bcrypt
 4. cryptoJS
 5. mysql
+6. ejs
 
 
 ROUTES
