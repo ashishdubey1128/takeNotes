@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/aes.min.js"></script>
+  <style type="text/css">
+  	html,body{
+  		height: 100%;
+  	}
+  </style>
+
+</head>
+<body>
+
+  <div style="background-color: rgba(0,0,0,0.6);padding-bottom: 20px;padding-top: 20px;margin-left: 15%;margin-right: 15%;border-radius: 20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <form method="post" action="/notes">
+            <input type="text"  name="title" placeholder="Enter Title" style="width: 40%;height:40px;background-color: rgba(255,255,255,0.8); border-radius: 20px;"><br><br>
+            <input type="text"  name="notes" placeholder="Enter Note" style="width: 40%;height:40px;background-color: rgba(255,255,255,0.8); border-radius: 20px;"><br><br>
+          <button class="btn btn-primary btn-md">Add</button>
+        </form> 
+
+      </div>
+      <%if(result.length>0){%>
+      <table class="table table-hover">
+          <th>Title</th><th style="text-align: center;">Note</th><th>Date Created</th><th>Action</th>
+      <%ans.forEach(function(result){%>
+      <tr>
+        <td>
+          <%=result.title%>
+        </td>
+            <td style="text-align: center;">
+              <%=result.text%>
+            </td>
+            <td>
+              <%=result.date%>
+            </td>
+      <td><a href="/delnotes/<%=result.id%>">Delete</a></td>
+    </tr>
+
+      <%});%>
+
+  <%}else {%> <h1>No note</h1><%}%>
+</body>
+
+</html>
