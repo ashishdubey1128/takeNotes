@@ -19,3 +19,6 @@ ROUTES
 4. Notes(get and post) - /notes/:id
 5. Delete Notes - /delnotes/:id
 6. Logout - /logout
+
+
+Note: The front-end will be enhanced and updated in his repo too for out of the world experience. 
