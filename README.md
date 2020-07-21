@@ -21,4 +21,4 @@ ROUTES
 6. Logout - /logout
 
 
-Note: The front-end will be enhanced and updated in his repo too for out of the world experience. 
+Note: The front-end will be enhanced and updated in this repo too for out of the world experience. 
