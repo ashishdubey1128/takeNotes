@@ -9,3 +9,13 @@ Node pckages
 3. bcrypt
 4. cryptoJS
 5. mysql
+
+
+ROUTES
+
+1. Root Route - /
+2. Login POST Route - /login
+3. Signup POST Route - /register
+4. Notes(get and post) - /notes/:id
+5. Delete Notes - /delnotes/:id
+6. Logout - /logout
